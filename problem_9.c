@@ -11,9 +11,9 @@ Find the product abc.*/
 
 int main()
 {
-    int sum = 1000;
+    const int sum = 1000;
     int a,b,c;
-    long  res=0;
+    int res=0;
     for (a = 1; a <= sum/3; a++)
     {
         for (b = a + 1; b <= sum/2; b++)
@@ -24,7 +24,7 @@ int main()
         }
     }
     res=(a*b*c);
-    printf("%ld",res);
+    printf("%d",res);
     return 0;
 }
 

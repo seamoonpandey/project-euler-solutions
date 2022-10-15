@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/USER/Desktop/project euler",
-      "program": "c:/Users/USER/Desktop/project euler/build/Debug/outDebug",
+      "cwd": "c:/Users/USER/Desktop/project-euler",
+      "program": "c:/Users/USER/Desktop/project-euler/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
