@@ -5,27 +5,44 @@ For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
 
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.*/
-//how to find pythagorian triplet using c ?
+// how to find pythagorian triplet using c ?
 #include <math.h>
 #include <stdio.h>
 
 int main()
 {
-    const int sum = 1000;
-    int a,b,c;
-    int res=0;
-    for (a = 1; a <= sum/3; a++)
+    int probable_first_number,
+        probable_second_number,
+        probable_third_number,
+        first_number,
+        second_number,
+        third_number,
+        sum = 1000;
+
+    long long result = 0;
+
+    for (probable_first_number = 1; probable_first_number <= sum / 3; probable_first_number++)
     {
-        for (b = a + 1; b <= sum/2; b++)
+        for (probable_second_number = probable_first_number + 1; probable_second_number <= sum / 2; probable_second_number++)
         {
-             c = sum - a - b;
-            if ( a*a + b*b == c*c )
-               printf("a=%d, b=%d, c=%d\n",a,b,c);
+            probable_third_number = sum - probable_first_number - probable_second_number;
+            if (probable_first_number * probable_first_number + probable_second_number * probable_second_number == probable_third_number * probable_third_number)
+            {
+                first_number = probable_first_number;
+                second_number = probable_second_number;
+                third_number = probable_third_number;
+
+                break;
+            }
         }
+
+        if (probable_first_number * probable_first_number + probable_second_number * probable_second_number == probable_third_number * probable_third_number)
+            break;
     }
-    res=(a*b*c);
-    printf("%d",res);
+    printf("probable_first_number=%d, probable_second_number=%d, probable_third_number=%d\n", probable_first_number, probable_second_number, probable_third_number);
+
+    result = (first_number * second_number * third_number);
+    printf("%lld", result);
+
     return 0;
 }
-
-
