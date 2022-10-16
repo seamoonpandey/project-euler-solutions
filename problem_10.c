@@ -19,7 +19,7 @@ int checkPrime(long long n)
 }
 void main()
 {
-    long sum = 2, n = 3;
+    long long sum = 2, n = 3;
     while (n != 2000000)
     {
         if (checkPrime(n) == 0)
@@ -29,5 +29,5 @@ void main()
         }
         n+=2;
     }
-    printf("SUM=%ld", sum);
+    printf("SUM=%lld", sum);
 }
