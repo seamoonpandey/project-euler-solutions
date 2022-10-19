@@ -1,9 +1,8 @@
 #include <stdio.h>
 int main()
 {
-    const int no_of_Rows=15; 
-    int totalSum = 75,
-        positionOfCursor,
+    const int no_of_Rows = 15;
+    int positionOfCursor,
         data[100][100] = {
             {75},
             {95, 64},
@@ -19,14 +18,14 @@ int main()
             {70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57},
             {91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48},
             {63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31},
-            {04, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60, 04, 23}};
+            {04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23}};
 
-    for (int i = no_of_Rows-2; i >= 0; i--)
+    for (int i = no_of_Rows - 2; i >= 0; i--)
     {
         for (int j = 0; j < i + 1; j++)
         {
-            data[i][j]+=(data[i+1][j]>data[i+1][j+1])?data[i+1][j]:data[i+1][j+1];
+            data[i][j] += (data[i + 1][j] > data[i + 1][j + 1]) ? data[i + 1][j] : data[i + 1][j + 1];
         }
     }
-    printf("%d",data[0][0]);
+    printf("%d", data[0][0]);
 }
