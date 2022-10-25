@@ -1,1 +1,1 @@
-numberWords
+char theDay[
